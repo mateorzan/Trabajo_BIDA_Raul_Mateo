@@ -51,4 +51,4 @@ def generar_dataset(num_records):
 
 if __name__ == "__main__":
     args = parser.parse_args()
-    generar_dataset(args.num_record)
+    generar_dataset(args.num_records)  # Cambié aquí a num_records
