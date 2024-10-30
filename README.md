@@ -1,26 +1,57 @@
-# Trabajo_BIDA_Ra-l_Mateo
+# Trabajo BIDA Raul Mateo
+
+## Introducción
+
 Trabajo Cassandra vs MySQL
 
-#SI NO TIENES INSTALADO CONDA
+## Requisitos Previos
 
+Instrucciones sobre los requisitos necesarios para el proyecto.
+
+### Instalación de Miniconda
+
+Instrucciones para instalar Miniconda.
+
+Si no tienes instalado Conda, ejecuta los siguientes comandos en tu terminal:
+
+```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh ```
 
-bash Miniconda3-latest-Linux-x86_64.sh
-#CREAMOS ENVIROMETN /OPCIONAL
+### Crear un Entorno Conda (Opcional)
 
-conda create --name nombre_del_entorno
+Instrucciones para crear y activar un entorno con Conda.
 
-conda env list
+```conda create --name nombre_del_entorno``` 
+```conda env list```
+```conda activate nombre_del_entorno```
 
-conda activate nombre_del_entorno
+## Instalación de Bibliotecas Necesarias
 
+Instrucciones para instalar las bibliotecas necesarias.
 
-#SCRIPT DATASET 
+```conda install pandas faker```
 
-Instala las bibliotecas necesarias:
+## Generación del Dataset
 
-conda install pandas faker
+Instrucciones para ejecutar el script que generará el conjunto de datos.
 
-Ejecuta el script:
+```python generar_dataset.py```
+## Estructura del Proyecto
 
-python generar_dataset.py
+- `README.md`: Script que genera el conjunto de datos.
+- `generar_dataset.py`: Script que genera el conjunto de datos.
+- `dataset.csv`: Archivo que contiene los datos generados.
+- `comparacion.md`: Documento que detalla la comparación entre Cassandra y MySQL.
+
+## Contribuciones
+
+Instrucciones para contribuir al proyecto.
+
+## Licencia
+
+Información sobre la licencia del proyecto.
+
+## Contacto
+
+Instrucciones para contactar al autor o responsable del proyecto.
