@@ -4,20 +4,40 @@
 
 Trabajo Cassandra vs MySQL
 
+## Contenido del repositorio
+
+- **README.md**: Archivo actual de documentación.
+- **docker-compose_Cassandra.yml**: Archivo Docker Compose para levantar un contenedor con un servidor Cassandra.
+- **docker-compose_MYSQL.yml**: Archivo Docker Compose para levantar un contenedor con un servidor MySQL.
+- **generar_datos.py**: Script en Python para generar datos de ejemplo.
+- `comparacion.md`: Documento que detalla la comparación entre Cassandra y MySQL.
+
 ## Requisitos Previos
 
 Instrucciones sobre los requisitos necesarios para el proyecto.
 
-### Instalación de Miniconda
+- **Docker**: Asegúrate de tener Docker instalado en tu sistema para levantar los servicios de bases de datos.
+- **Python 3**: Necesario para ejecutar el script `generar_datos.py`.
+
+### Instalación de Miniconda(Si no lo tienes ya instalado)
 
 Instrucciones para instalar Miniconda.
 
-Si no tienes instalado Conda, ejecuta los siguientes comandos en tu terminal:
+Si no tienes instalado Conda, ejecuta los siguientes comandos en tu terminal de Ubuntu:
 
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh 
+mkdir -p ~/miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
+rm ~/miniconda3/miniconda.sh
 ```
+En Windows:
+```bash
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda.exe
+Start-Process -FilePath ".\miniconda.exe" -ArgumentList "/S" -Wait
+del miniconda.exe
+```
+
 ### Crear un Entorno Conda (Opcional)
 
 Instrucciones para crear y activar un entorno con Conda.
@@ -27,33 +47,44 @@ conda create --name nombre_del_entorno
 conda env list
 conda activate nombre_del_entorno
 ```
-## Instalación de Bibliotecas Necesarias
+### Clonamos el repositorio en la ubicación deseada
+
+```bash
+git clone https://github.com/mateorzan/Trabajo_BIDA_Raul_Mateo.git
+```
+```bash
+git clone git@github.com:mateorzan/Trabajo_BIDA_Raul_Mateo.git
+```
+##DOCKER
+###Ejecucion Docker Compose Cassandra.
+
+```bash
+docker-compose -f docker-compose_Cassandra.yml up
+```
+###Ejecucion Docker Compose MySQL.
+
+```bash
+docker-compose -f docker-compose_MySQL.yml up
+```
+
+### Instalación de Bibliotecas Necesarias para ejecutar el script.
 
 Instrucciones para instalar las bibliotecas necesarias.
 ```bash
 conda install pandas faker
 ```
-## Generación del Dataset
+### Generación del Dataset.
 
 Instrucciones para ejecutar el script que generará el conjunto de datos.
+
 ```bash
 python generar_dataset.py
 ```
-## Estructura del Proyecto
 
-- `README.md`: Script que genera el conjunto de datos.
-- `generar_dataset.py`: Script que genera el conjunto de datos.
-- `dataset.csv`: Archivo que contiene los datos generados.
-- `comparacion.md`: Documento que detalla la comparación entre Cassandra y MySQL.
+## Notas
 
-## Contribuciones
+- Asegúrate de revisar las configuraciones de conexión en los archivos de Docker y en el script `generar_datos.py` si necesitas personalizarlos para tu entorno.
 
-Instrucciones para contribuir al proyecto.
+## Autor
 
-## Licencia
-
-Información sobre la licencia del proyecto.
-
-## Contacto
-
-Instrucciones para contactar al autor o responsable del proyecto.
+Creado por **mateorzan** y **Raul**.
