@@ -81,7 +81,52 @@ Instrucciones para ejecutar el script que generará el conjunto de datos.
 python generar_dataset.py
 ```
 
-## Notas
+##Automatizar Carga de datos en BD
+
+###Carga en MySQL
+
+Instalamos librerias necesarias.
+```bash
+conda install mysql-connector-python
+```
+Ejecutamos archivo carga datos SQL.py
+
+```bash
+python carga_datos_SQL.py
+```
+
+###Carga en Cassandra
+
+Instalamos librerias necesarias.
+```bash
+conda install cassandra-driver
+```
+Ejecutamos archivo carga datos SQL.py
+
+```bash
+python carga_datos_Cassandra.py
+```
+
+##Consultas BD
+###Consulta SQL
+Ejecutamos consultas.
+
+```bash
+python consulta_SQL.py
+```
+###Consulta Cassandra
+Ejecutamos consultas.
+
+```bash
+python consulta_Cassandra.py
+```
+
+##Comparamos rendimiento
+
+```bash
+python rendimiento.py
+```
+##Notas
 
 - Asegúrate de revisar las configuraciones de conexión en los archivos de Docker y en el script `generar_datos.py` si necesitas personalizarlos para tu entorno.
 
