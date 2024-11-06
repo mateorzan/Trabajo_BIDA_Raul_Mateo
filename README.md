@@ -14,6 +14,8 @@ Trabajo Cassandra vs MySQL
 - **docker-compose_MYSQL.yml** - Archivo Docker Compose para desplegar el servidor MySQL.
 - **generar_datos.py** - Script en Python para generar datos que se insertarán en las bases de datos y se utilizarán en las pruebas de comparación.
 
+# INSTRUCCIONES FUNCIONAMIENTO COMPLETAS
+
 ## Requisitos Previos
 
 Instrucciones sobre los requisitos necesarios para el proyecto.
@@ -33,12 +35,6 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 ```
-En Windows:
-```bash
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe -o miniconda.exe
-Start-Process -FilePath ".\miniconda.exe" -ArgumentList "/S" -Wait
-del miniconda.exe
-```
 
 ### Crear un Entorno Conda (Opcional)
 
@@ -57,13 +53,17 @@ git clone https://github.com/mateorzan/Trabajo_BIDA_Raul_Mateo.git
 ```bash
 git clone git@github.com:mateorzan/Trabajo_BIDA_Raul_Mateo.git
 ```
-##DOCKER
-###Ejecucion Docker Compose Cassandra.
+
+## DOCKER
+
+### Ejecucion Docker Compose Cassandra.
 
 ```bash
 docker-compose -f docker-compose_Cassandra.yml up
 ```
-###Ejecucion Docker Compose MySQL.
+
+### Ejecucion Docker Compose MySQL.
+
 
 ```bash
 docker-compose -f docker-compose_MySQL.yml up
@@ -85,9 +85,12 @@ Instrucciones para ejecutar el script que generará el conjunto de datos.
 python generar_dataset.py
 ```
 
-##Automatizar Carga de datos en BD
 
-###Carga en MySQL
+## Automatizar Carga de datos en BD
+
+
+### Carga en MySQL
+
 
 Instalamos librerias necesarias.
 ```bash
@@ -99,7 +102,7 @@ Ejecutamos archivo carga datos SQL.py
 python carga_datos_SQL.py
 ```
 
-###Carga en Cassandra
+### Carga en Cassandra
 
 Instalamos librerias necesarias.
 ```bash
@@ -111,26 +114,31 @@ Ejecutamos archivo carga datos SQL.py
 python carga_datos_Cassandra.py
 ```
 
-##Consultas BD
-###Consulta SQL
+## Consultas BD
+
+### Consulta SQL
+
 Ejecutamos consultas.
 
 ```bash
 python consulta_SQL.py
 ```
-###Consulta Cassandra
+
+### Consulta Cassandra
+
 Ejecutamos consultas.
 
 ```bash
 python consulta_Cassandra.py
 ```
 
-##Comparamos rendimiento
+## Comparamos rendimiento
 
 ```bash
 python rendimiento.py
 ```
-##Notas
+
+## Notas
 
 - Asegúrate de revisar las configuraciones de conexión en los archivos de Docker y en el script `generar_datos.py` si necesitas personalizarlos para tu entorno.
 
