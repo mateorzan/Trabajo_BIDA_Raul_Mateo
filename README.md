@@ -14,7 +14,7 @@ Trabajo Cassandra vs MySQL
 - **docker-compose_MYSQL.yml** - Archivo Docker Compose para desplegar el servidor MySQL.
 - **generar_datos.py** - Script en Python para generar datos que se insertarán en las bases de datos y se utilizarán en las pruebas de comparación.
 
-# INSTRUCCIONES FUNCIONAMIENTO COMPLETAS
+# Instrucciones de funcionamiento completas
 
 ## Requisitos Previos
 
