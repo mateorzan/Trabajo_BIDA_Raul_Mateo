@@ -6,11 +6,13 @@ Trabajo Cassandra vs MySQL
 
 ## Contenido del repositorio
 
-- **README.md**: Archivo actual de documentación.
-- **docker-compose_Cassandra.yml**: Archivo Docker Compose para levantar un contenedor con un servidor Cassandra.
-- **docker-compose_MYSQL.yml**: Archivo Docker Compose para levantar un contenedor con un servidor MySQL.
-- **generar_datos.py**: Script en Python para generar datos de ejemplo.
-- `comparacion.md`: Documento que detalla la comparación entre Cassandra y MySQL.
+- **cassandra/** - Carpeta que contiene los archivos y configuraciones específicas para Cassandra.
+- **mysql/** - Carpeta que contiene los archivos y configuraciones específicas para MySQL.
+- **README.md** - Archivo de documentación del proyecto.
+- **comparar_r.py** - Script en Python para realizar comparaciones entre Cassandra y MySQL.
+- **docker-compose_Cassandra.yml** - Archivo Docker Compose para desplegar el servidor Cassandra.
+- **docker-compose_MYSQL.yml** - Archivo Docker Compose para desplegar el servidor MySQL.
+- **generar_datos.py** - Script en Python para generar datos que se insertarán en las bases de datos y se utilizarán en las pruebas de comparación.
 
 ## Requisitos Previos
 
