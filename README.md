@@ -71,6 +71,8 @@ docker-compose -f docker-compose_MySQL.yml up
 
 Instrucciones para instalar las bibliotecas necesarias.
 ```bash
+conda config --add channels conda-forge
+conda install python3.10.0
 conda install pandas faker
 ```
 ### Generación del Dataset.
