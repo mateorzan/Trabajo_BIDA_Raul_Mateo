@@ -6,8 +6,12 @@ Trabajo Cassandra vs MySQL
 
 ## Contenido del repositorio
 
-- **cassandra/** - Carpeta que contiene los archivos y configuraciones específicas para Cassandra.
-- **mysql/** - Carpeta que contiene los archivos y configuraciones específicas para MySQL.
+- **cassandra/** - Carpeta que contiene los archivos de carga de datos y consultas específicas para Cassandra.
+	- **carga_datos_Cassandra.py**
+	- **consulta_cassandra.py**
+- **mysql/** - Carpeta que contiene los archivos  de carga de datos y consultas específicas para MySQL.
+	- **carga_datos_SQL.py**
+        - **consulta_mysql.py** 
 - **README.md** - Archivo de documentación del proyecto.
 - **comparar_r.py** - Script en Python para realizar comparaciones entre Cassandra y MySQL.
 - **docker-compose_Cassandra.yml** - Archivo Docker Compose para desplegar el servidor Cassandra.
