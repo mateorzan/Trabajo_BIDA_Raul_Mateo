@@ -5,7 +5,7 @@ cluster = Cluster(['localhost'])
 session = cluster.connect()
 
 # Seleccionar el keyspace (asegúrate de usar el keyspace adecuado)
-session.set_keyspace('testkeyspace')
+session.set_keyspace('trabajo')
 
 # Ejecutar la consulta
 try:

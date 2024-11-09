@@ -60,9 +60,9 @@ try:
         conn.commit()
 
     # Cargar los datos de cada archivo CSV en su respectiva tabla
-    cargar_datos("Clientes.csv", "Clientes", ["ClienteID", "Nombre", "Apellido", "Correo", "Telefono", "FechaRegistro"])
-    cargar_datos("Productos.csv", "Productos", ["ProductoID", "NombreProducto", "Categoria", "Precio", "Stock"])
-    cargar_datos("Ventas.csv", "Ventas", ["VentaID", "ClienteID", "ProductoID", "Cantidad", "FechaVenta"])
+    cargar_datos("../Clientes.csv", "Clientes", ["ClienteID", "Nombre", "Apellido", "Correo", "Telefono", "FechaRegistro"])
+    cargar_datos("../Productos.csv", "Productos", ["ProductoID", "NombreProducto", "Categoria", "Precio", "Stock"])
+    cargar_datos("../Ventas.csv", "Ventas", ["VentaID", "ClienteID", "ProductoID", "Cantidad", "FechaVenta"])
 
 except mysql.connector.Error as err:
     print(f"Error: {err}")

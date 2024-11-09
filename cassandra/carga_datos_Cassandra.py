@@ -7,10 +7,10 @@ session = cluster.connect()
 
 # Crear keyspace y tablas en Cassandra
 session.execute("""
-CREATE KEYSPACE IF NOT EXISTS testkeyspace WITH REPLICATION = 
+CREATE KEYSPACE IF NOT EXISTS trabajo WITH REPLICATION = 
 { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }
 """)
-session.set_keyspace('testkeyspace')
+session.set_keyspace('trabajo')
 
 session.execute("""
 CREATE TABLE IF NOT EXISTS Clientes (
@@ -50,8 +50,8 @@ def cargar_datos_cassandra(csv_path, table_name, columns):
         session.execute(f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))})", tuple(row))
 
 # Cargar datos en Cassandra
-cargar_datos_cassandra("Clientes.csv", "Clientes", ["ClienteID", "Nombre", "Apellido", "Correo", "Telefono", "FechaRegistro"])
-cargar_datos_cassandra("Productos.csv", "Productos", ["ProductoID", "NombreProducto", "Categoria", "Precio", "Stock"])
-cargar_datos_cassandra("Ventas.csv", "Ventas", ["VentaID", "ClienteID", "ProductoID", "Cantidad", "FechaVenta"])
+cargar_datos_cassandra("../Clientes.csv", "Clientes", ["ClienteID", "Nombre", "Apellido", "Correo", "Telefono", "FechaRegistro"])
+cargar_datos_cassandra("../Productos.csv", "Productos", ["ProductoID", "NombreProducto", "Categoria", "Precio", "Stock"])
+cargar_datos_cassandra("../Ventas.csv", "Ventas", ["VentaID", "ClienteID", "ProductoID", "Cantidad", "FechaVenta"])
 
 cluster.shutdown()

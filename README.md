@@ -1,22 +1,30 @@
-# Trabajo BIDA Raul Mateo
+# Trabajo BIDA Raul E. y Mateo
 
 ## Introducción
 
-Trabajo Cassandra vs MySQL
+Trabajo Cassandra vs MySQL.
 
 ## Contenido del repositorio
 
 - **cassandra/** - Carpeta que contiene los archivos de carga de datos y consultas específicas para Cassandra.
-	- **carga_datos_Cassandra.py**
-	- **consulta_cassandra.py**
+	- **carga_datos_Cassandra.py** - Archivo que realiza la carga de datos a la base de datos.
+	- **consulta_cassandra.py** - Archivo que realiza una consulta a la base de datos.
+        - **comparar_Cassandra.py** - Archivo que comprueba el rendimiento.
+        - **borrar_datos_Cassandra.py** - Archivo opcional que borra los datos insertados.
 - **mysql/** - Carpeta que contiene los archivos  de carga de datos y consultas específicas para MySQL.
-	- **carga_datos_SQL.py**
-        - **consulta_mysql.py** 
+	- **carga_datos_SQL.py** - Archivo que realiza la carga de datos a la base de datos.
+        - **consulta_mysql.py** - Archivo que realiza una consulta a la base de datos.
+        - **comparar_MYSQL.py** - Archivo que comprueba el rendimiento.
+        - **borrar_datos_SQL.py** - Archivo opcional que borra los datos insertados.
 - **README.md** - Archivo de documentación del proyecto.
-- **comparar_r.py** - Script en Python para realizar comparaciones entre Cassandra y MySQL.
+- **comparar.py** - Script en Python para realizar comparaciones entre Cassandra y MySQL.
 - **docker-compose_Cassandra.yml** - Archivo Docker Compose para desplegar el servidor Cassandra.
 - **docker-compose_MYSQL.yml** - Archivo Docker Compose para desplegar el servidor MySQL.
 - **generar_datos.py** - Script en Python para generar datos que se insertarán en las bases de datos y se utilizarán en las pruebas de comparación.
+- **generar_datos.py** - Script en Python para generar datos que se insertarán en las bases de datos y se utilizarán en las pruebas de comparacion.
+- **Clientes.csv** - Datos generados con el script
+- **Productos.csv** - Datos generados con el script
+- **Ventas.csv** - Datos generados con el script
 
 # Instrucciones de funcionamiento completas
 
@@ -60,6 +68,7 @@ git clone git@github.com:mateorzan/Trabajo_BIDA_Raul_Mateo.git
 
 ## DOCKER
 
+Importante abrir Docker Desktop primero.
 ### Ejecucion Docker Compose Cassandra.
 
 ```bash
@@ -76,6 +85,7 @@ docker-compose -f docker-compose_MySQL.yml up
 ### Instalación de Bibliotecas Necesarias para ejecutar el script.
 
 Instrucciones para instalar las bibliotecas necesarias.
+
 ```bash
 conda config --add channels conda-forge
 conda install python3.10.0
@@ -85,16 +95,15 @@ conda install pandas faker
 
 Instrucciones para ejecutar el script que generará el conjunto de datos.
 
-```bash
-python generar_dataset.py
-```
+Al final especificas el numero de datos que quieras generar, en este caso vamos a probar con 10.
 
+```bash
+python generar_datos.py 10
+```
 
 ## Automatizar Carga de datos en BD
 
-
 ### Carga en MySQL
-
 
 Instalamos librerias necesarias.
 ```bash
@@ -103,6 +112,7 @@ conda install mysql-connector-python
 Ejecutamos archivo carga datos SQL.py
 
 ```bash
+cd mysql
 python carga_datos_SQL.py
 ```
 
@@ -115,6 +125,7 @@ conda install cassandra-driver
 Ejecutamos archivo carga datos SQL.py
 
 ```bash
+cd cassandra
 python carga_datos_Cassandra.py
 ```
 
@@ -125,6 +136,7 @@ python carga_datos_Cassandra.py
 Ejecutamos consultas.
 
 ```bash
+cd mysql
 python consulta_SQL.py
 ```
 
@@ -133,13 +145,33 @@ python consulta_SQL.py
 Ejecutamos consultas.
 
 ```bash
+cd cassandra
 python consulta_Cassandra.py
 ```
 
 ## Comparamos rendimiento
 
+### Comparador general
+
+Este script hace una comparacion de rendimiento cuandos los dos servidores estan activos.
+
 ```bash
-python rendimiento.py
+python comparar.py
+```
+
+### MySQL
+
+Este script hace una comparacion de rendimiento especifica a mysql, la idea es ejecutarlo con el servidor de cassandra apagado.
+```bash
+cd mysql
+python comparar_MYSL.py
+```
+### Cassandra
+
+Este script hace una comparacion de rendimiento especifica a cassandra, la idea es ejecutarlo con el sevidor de mysql apagado. 
+```bash
+cd cassandra
+python comparar_Cassandra.py
 ```
 
 ## Notas
