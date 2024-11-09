@@ -1,4 +1,22 @@
-# Trabajo BIDA Raul E. y Mateo
+# Trabajo BIDA: Comparativa entre Cassandra y MySQL
+
+Autores: **Mateo Rzan** y **Raúl E.**
+
+---
+
+## Índice
+
+- [Introducción](#introducción)
+- [Contenido del Repositorio](#contenido-del-repositorio)
+- [Requisitos Previos](#requisitos-previos)
+- [Instrucciones de Ejecución](#instrucciones-de-ejecución)
+- [Automatización de la Carga de Datos](#automatización-de-la-carga-de-datos)
+- [Consultas a las Bases de Datos](#consultas-a-las-bases-de-datos)
+- [Comparación de Rendimiento](#comparación-de-rendimiento)
+- [Notas](#notas)
+- [Autores](#autores)
+
+---
 
 ## Introducción
 
@@ -61,9 +79,7 @@ conda activate nombre_del_entorno
 
 ```bash
 git clone https://github.com/mateorzan/Trabajo_BIDA_Raul_Mateo.git
-```
-```bash
-git clone git@github.com:mateorzan/Trabajo_BIDA_Raul_Mateo.git
+cd Trabajo_BIDA_Raul_Mateo
 ```
 
 ## DOCKER
