@@ -98,7 +98,7 @@ docker-compose -f docker-compose_Cassandra.yml up
 docker-compose -f docker-compose_MySQL.yml up
 ```
 
-## Automatización de  Carga de la Carga de Datos
+## Automatización de la Carga de Datos
 
 ### Instalación de Bibliotecas Necesarias para ejecutar el script.
 
@@ -194,6 +194,6 @@ python comparar_Cassandra.py
 
 - Asegúrate de revisar las configuraciones de conexión en los archivos de Docker y en el script `generar_datos.py` si necesitas personalizarlos para tu entorno.
 
-## Autor
+## Autores
 
 Creado por **mateorzan** y **Raul**.
