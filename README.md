@@ -44,7 +44,7 @@ Trabajo Cassandra vs MySQL.
 - **Productos.csv** - Datos generados con el script
 - **Ventas.csv** - Datos generados con el script
 
-# Instrucciones de funcionamiento completas
+# Instrucciones de Ejecución
 
 ## Requisitos Previos
 
@@ -98,6 +98,8 @@ docker-compose -f docker-compose_Cassandra.yml up
 docker-compose -f docker-compose_MySQL.yml up
 ```
 
+## Automatización de  Carga de la Carga de Datos
+
 ### Instalación de Bibliotecas Necesarias para ejecutar el script.
 
 Instrucciones para instalar las bibliotecas necesarias.
@@ -116,8 +118,6 @@ Al final especificas el numero de datos que quieras generar, en este caso vamos 
 ```bash
 python generar_datos.py 10
 ```
-
-## Automatizar Carga de datos en BD
 
 ### Carga en MySQL
 
@@ -145,7 +145,7 @@ cd cassandra
 python carga_datos_Cassandra.py
 ```
 
-## Consultas BD
+## Consultas a las Bases de Datos
 
 ### Consulta SQL
 
@@ -165,7 +165,7 @@ cd cassandra
 python consulta_Cassandra.py
 ```
 
-## Comparamos rendimiento
+## Comparación de Rendimiento 
 
 ### Comparador general
 
